@@ -1,8 +1,17 @@
 <html>
     <head>
-
     </head>
     <body>
-        <p>bah arrete !</p>
+        <h1></h1>
+        <h1>bah arrête !</h1>
     </body>
 </html>
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const myParam = urlParams.get('question');
+    if (myParam == null) {
+        document.getElementsByTagName("h1")[0].innerHTML = "tu as faim ?";
+    } else {
+        document.getElementsByTagName("h1")[0].innerHTML = myParam;
+    }
+</script>
